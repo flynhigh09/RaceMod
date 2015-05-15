@@ -1,0 +1,5 @@
+c:\users\playprey\documents\visual studio 2013\Projects\SPraceMod\SPraceMod\obj\Debug\SPraceMod.csprojResolveAssemblyReference.cache
+D:\Program Files\Rockstar Games\Grand Theft Auto V\scripts\SPraceMod.net.dll
+D:\Program Files\Rockstar Games\Grand Theft Auto V\scripts\SPraceMod.net.pdb
+c:\users\playprey\documents\visual studio 2013\Projects\SPraceMod\SPraceMod\obj\Debug\SPraceMod.net.dll
+c:\users\playprey\documents\visual studio 2013\Projects\SPraceMod\SPraceMod\obj\Debug\SPraceMod.net.pdb
