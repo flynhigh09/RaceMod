@@ -11,14 +11,24 @@ namespace SPraceMod
     {
         Race01 Race01 = new Race01();
 
+        string VehicleModel = "BTYPE";
 
 
         public Main()
         {
-
+            LoadConfig();
             Interval = 200;
             Tick += Main_Tick;
             KeyDown += KeyDownEvent;
+
+            
+
+
+        }
+
+        private void LoadConfig()
+        {
+            Settings.SetValue("RACE SETTINGS", "VEHICLE MODEL", "BODHI2");
         }
 
         void Main_Tick(object sender, EventArgs e)
@@ -33,7 +43,7 @@ namespace SPraceMod
         {
             if (Game.IsKeyPressed(Keys.NumPad1))
             {
-                Race01.Initialize(1, "BTYPE");
+                Race01.Initialize(1, VehicleModel);
                 
             }
         }
