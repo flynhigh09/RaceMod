@@ -37,8 +37,7 @@ namespace SPraceMod.Races
 
             RaceCar01 = World.CreateVehicle(VehicleModel, RaceCar01Spawn, 95f);
             Racer01 = World.CreatePed(GTA.Native.PedHash.Barry, Racer01Spawn);
-            Racer01.DrivingSpeed = 100f;
-            Racer01.Task.WarpIntoVehicle(RaceCar01, VehicleSeat.Driver);
+            SetupTasksequences();
             RaceCar01.MarkAsNoLongerNeeded();
             Racer01.MarkAsNoLongerNeeded();
             Racer01.Task.PerformSequence(Racer01Task);
@@ -47,6 +46,7 @@ namespace SPraceMod.Races
         void SetupTasksequences()
         {
             Racer01Task = new TaskSequence();
+            Racer01Task.AddTask.WarpIntoVehicle(RaceCar01, VehicleSeat.Driver);
             Racer01Task.AddTask.DriveTo(RaceCar01, Point01, 5f, 100 / 2f, (int)DrivingStyle.AvoidTrafficExtremely);
             Racer01Task.AddTask.DriveTo(RaceCar01, Point02, 5f, 100 / 2f, (int)DrivingStyle.AvoidTrafficExtremely);
             Racer01Task.Close();
