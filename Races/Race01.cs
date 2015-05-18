@@ -56,9 +56,10 @@ namespace SPraceMod.Races
         {
             Racer01Task = new TaskSequence();
             Racer01Task.AddTask.WarpIntoVehicle(RaceCar01, VehicleSeat.Driver);
-            Racer01Task.AddTask.DriveTo(RaceCar01, Point01, 300f, (int)DrivingStyle.AvoidTrafficExtremely);
+            Racer01Task.AddTask.DriveTo(RaceCar01, Point01, 100f, (int)DrivingStyle.AvoidTrafficExtremely);
             Racer01Task.AddTask.DriveTo(RaceCar01, Point02, 300f, (int)DrivingStyle.AvoidTrafficExtremely);
           //  Racer01Task.AddTask.DriveTo(RaceCar01, Point03, 300f, (int)DrivingStyle.AvoidTrafficExtremely);
+            
             Racer01Task.Close();
         }
 
