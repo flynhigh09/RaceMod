@@ -3,3 +3,8 @@ D:\Program Files\Rockstar Games\Grand Theft Auto V\scripts\SPraceMod.net.dll
 D:\Program Files\Rockstar Games\Grand Theft Auto V\scripts\SPraceMod.net.pdb
 c:\users\playprey\documents\visual studio 2013\Projects\SPraceMod\SPraceMod\obj\Debug\SPraceMod.net.dll
 c:\users\playprey\documents\visual studio 2013\Projects\SPraceMod\SPraceMod\obj\Debug\SPraceMod.net.pdb
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\bin\Debug\SPraceMod.net.dll
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\bin\Debug\SPraceMod.net.pdb
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\SPraceMod.csprojResolveAssemblyReference.cache
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\SPraceMod.net.dll
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\SPraceMod.net.pdb
