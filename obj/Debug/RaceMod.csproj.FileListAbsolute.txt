@@ -1,0 +1,6 @@
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\bin\Debug\RaceMod.dll
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\bin\Debug\RaceMod.pdb
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\RaceMod.csprojResolveAssemblyReference.cache
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\RaceMod.g.resources
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\RaceMod.dll
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\RaceMod.pdb

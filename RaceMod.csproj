@@ -7,8 +7,8 @@
     <ProjectGuid>{3CB0D79D-09FD-468D-9C16-B96B615DDE3F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SPraceMod</RootNamespace>
-    <AssemblyName>SPraceMod.net</AssemblyName>
+    <RootNamespace>RaceMod</RootNamespace>
+    <AssemblyName>RaceMod</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -51,7 +51,7 @@
     <Compile Include="Races\Race01.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="SPraceMod.ini" />
+    <Resource Include="RaceMod.ini" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

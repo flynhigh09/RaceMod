@@ -8,19 +8,20 @@ using GTA;
 using GTA.Native;
 using GTA.Math;
 
-namespace SPraceMod.Races
+namespace RaceMod.Races
 {
     class Race01 : Script
     {
-        private UIRectangle _headsupRectangle;
-        public static UIText _bigmessage;
-            
+        private UIRectangle _rec;
+        public static UIText message;
+
         public Blip _Start;
         Blip _chks;
 
         Vehicle RaceCar01;
         Vehicle RaceCar02;
         Vehicle playerRaceCar;
+
         Ped playerRacer;
         Ped Racer01;
         Ped Racer02;
@@ -31,8 +32,11 @@ namespace SPraceMod.Races
         private readonly List<Ped> _racers = new List<Ped>();
 
         float racercarhealthmax = 0;
+        float racercarhealth = 0;
         float racerhealthmax = 0;
         float racerhealth = 0;
+        float racer2healthmax = 0;
+        float racer2health = 0;
         float racerSpeed = 100f;
 
         public Vector3 SpawnPointPlayer = new Vector3(648.682f, 3502.916f, 33.27346f);
@@ -51,7 +55,6 @@ namespace SPraceMod.Races
         new Vector3(905.267f, 3633.396f, 32.01043f)};
 
         int CurrentCheckpoint;
-
         Random rnd;
 
         public Race01()
@@ -71,10 +74,9 @@ namespace SPraceMod.Races
         }
 
         internal void Initialize(VehicleHash VehicleModel)
-        {
-            UI.ShowSubtitle("~b~Race to Checkpoint 1 ~s~");
+        {          
             playerRacer = Game.Player.Character;
-
+           
             //Vehicles
             RaceCar01 = World.CreateVehicle(VehicleModel, RaceCar01Spawn, 98.702f);
             RaceCar02 = World.CreateVehicle(VehicleModel, RaceCar02Spawn, 98.702f);
@@ -114,6 +116,8 @@ namespace SPraceMod.Races
             //Function.Call(Hash.SET_VEHICLE_LIVERY, playerRaceCar, 5);
             Function.Call(Hash.SET_VEHICLE_MOD_COLOR_1, playerRaceCar, 5, 0, 0);
             Function.Call(Hash.SET_VEHICLE_WHEEL_TYPE, playerRaceCar, getrandomnumb(1,7));
+
+            UI.ShowSubtitle("~b~Race to Checkpoint 1 ~s~");
 
             //Tasks
             playerRacer.Task.WarpIntoVehicle(playerRaceCar, VehicleSeat.Driver);
@@ -188,9 +192,16 @@ namespace SPraceMod.Races
             Function.Call(Hash.SET_BLIP_COLOUR, _chks.Handle, 1);
             Function.Call(Hash.SET_BLIP_ROUTE, _chks.Handle, true);
 
-            //ShowMessage("Racer health: ~b~" + racerhealthmax + "~w~", 100, Color.Crimson, 2.5f);
-            // _bigmessage = new UIText("Racer health: ~b~" + racerhealthmax, new Point(75, 325), 0.7f, Color.Crimson, 1, true);
-            // _headsupRectangle = new UIRectangle(new Point(0, 320), new Size(200, 110), Color.FromArgb(100, 0, 0, 0));
+            racercarhealthmax = Game.Player.Character.MaxHealth;
+            racercarhealth = Game.Player.Character.Health;
+        
+            racerhealthmax = Game.Player.Character.MaxHealth;
+            racerhealth = Game.Player.Character.Health;
+
+            racer2healthmax = Game.Player.Character.MaxHealth;
+            racer2health = Game.Player.Character.Health;
+
+            //Message("Racer health: ~b~" + racerhealthmax + "~w~", 100, Color.Crimson, 2.5f);
 
             if (cpointID == 0)
             {           
@@ -230,8 +241,8 @@ namespace SPraceMod.Races
 
         Ped randomracers(int NumberOfRacers)
         {
-               int[] peds = {NumberOfRacers};
-               Racer01 = Function.Call<Ped>(Hash.CREATE_RANDOM_PED, 637.415f, 3517.02f, 35.62923f);
+            int[] peds = {NumberOfRacers};
+             Racer01 = Function.Call<Ped>(Hash.CREATE_RANDOM_PED, 637.415f, 3517.02f, 35.62923f);
             return Racer01;
         }
 
@@ -257,18 +268,29 @@ namespace SPraceMod.Races
             Function.Call(Hash.STAT_SET_INT, name, cash, true);
         }
 
-        public static void ShowMessage(string text, int time, Color color, float size = 2.5f)
+        public static void Message(string text, int font, int time, Color color, float size = 2.5f)
         {          
-            _bigmessage.Caption = text;
-            _bigmessage.Color = color;
-            _bigmessage.Scale = size;
+            message.Caption = text;
+            message.Font = font;
+            message.Color = color;
+            message.Scale = size;
+        }
+
+        public static void Message(bool center, string text, int font, Point pos, int time, Color color, float size = 2.5f)
+        {
+            message.Centered = center;
+            message.Caption = text;              
+            message.Font = font;
+            message.Position = pos;
+            message.Color = color;
+            message.Scale = size;
         }
 
         private void LogToFile(string text)
         {
-            using (StreamWriter w = File.AppendText("log.txt"))
+            using (StreamWriter str = File.AppendText("log.txt"))
             {
-                w.Write(text + "\n");
+                str.Write(text + "\n");
             }
         }
     }
