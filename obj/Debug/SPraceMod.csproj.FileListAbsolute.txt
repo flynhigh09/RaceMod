@@ -8,3 +8,4 @@ C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C#
 C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\SPraceMod.csprojResolveAssemblyReference.cache
 C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\SPraceMod.net.dll
 C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\SPraceMod.net.pdb
+C:\Users\user 1\Documents\Visual Studio 2013\Projects\GTA-V-RTE\GTA-V-TRAINER\C# gtav scripts\SPraceMod\obj\Debug\SPraceMod.net.g.resources
