@@ -1,6 +1,4 @@
-# RaceMod
-RACING mod for GTAV.
+# SPraceMod
+Single player mod for GTA V; Provides RACING.
 
-
-Once a Fork of Play/Prey more testing needed.
-Added ini plus some car mods may add to ini aswell.
+Fork of play/prey more testing needed..
